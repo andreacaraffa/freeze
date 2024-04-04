@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="FreeZe: Training-Free Zero-Shot 6D Pose Estimation with Geometric and Vision Foundation Models">
+  <meta name="keywords" content="FreeZe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeZe</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" type="image/x-icon" href="./static/images/query_fused_120_crop.png"> -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129398;</text></svg>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FreeZe &#129398;</h1>
+          <h2 class="title is-2 publication-title">Training-<span style="color: #006EB8">Free</span> <span style="color: #006EB8">Ze</span>ro-Shot 6D Pose Estimation with Geometric and Vision Foundation Models</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=ARB9u4cAAAAJ">Andrea Caraffa</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=dT1N2IUAAAAJ">Davide Boscaini</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=GYZWQrAAAAAJ">Amir Hamza</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=BQ7li6AAAAAJ">Fabio Poiesi</a><sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>TeV - Fondazione Bruno Kessler</span>,
+            <span class="author-block"><sup>2</sup>University of Trento</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <tt class="author-block">{acaraffa, dboscaini, ahamza, poiesi}@fbk.eu</tt>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.00947"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- code Link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark[disabled]" style="pointer-events: none">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png">
+      <p></p>
+      <h2 class="subtitle has-text-centered" style="margin-top: 30px;">
+        <b>FreeZe</b> estimates the <b>6D pose</b>  of a novel object by fusing contributions from pre-trained geometric and vision foundation models <b>without requiring any task-specific training</b>.
+      </h2> <!-- <span class="dnerf">FreeZe</span> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="ycbv-54" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ycbv-54.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="ycbv-53" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ycbv-53.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="ycbv-50" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ycbv-50.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="ycvb-52" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ycbv-52.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="tudl-01" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tudl-01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="tudl-02" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tudl-02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="tudl-03" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tudl-03.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Estimating the 6D pose of objects unseen during training is highly desirable yet challenging.
+            Zero-shot object 6D pose estimation methods address this challenge by leveraging additional task-specific supervision provided by large-scale, photo-realistic synthetic datasets.
+            However, their performance heavily depends on the quality and diversity of rendered data and they require extensive training.
+          </p>
+          <p>
+            In this work, we show how to tackle the same task but without training on specific data.
+            We propose FreeZe, a novel solution that harnesses the capabilities of pre-trained geometric and vision foundation models.
+            FreeZe leverages 3D geometric descriptors learned from unrelated 3D point clouds and 2D visual features learned from web-scale 2D images to generate discriminative 3D point-level descriptors.
+            We then estimate the 6D pose of unseen objects by 3D registration based on RANSAC.
+            We also introduce a novel algorithm to solve ambiguous cases due to geometrically symmetric objects that is based on visual features. 
+          </p>
+          <p>
+            We comprehensively evaluate FreeZe across the seven core datasets of the BOP Benchmark, which include over a hundred 3D objects and 20,000 images captured in various scenarios.
+            FreeZe consistently outperforms all state-of-the-art approaches, including competitors extensively trained on synthetic 6D pose estimation data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+  </div>
+</section>
+
+
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <img src="./static/images/diagram.png" alt="Architecture of FeeZe" />
+          <div class="content has-text-justified" style="margin-top: 30px;">
+            <p>
+              Given a 3D model of a novel query object and an RGBD image, we compute their geometric and
+              visual features using <b>frozen geometric</b> and <b>vision foundation models</b> which do not require any task-speficic training.
+            </p>
+            <p>
+              We create rendered images from the 3D model to extract visual features of the query object, which we then back project to the object point cloud.
+              Concurrently, we extract geometric features, which we then fuse with the visual features.
+            <p>
+              Similarly, we compute visual and geometric features of the target object imaged in the input crop, and fuse the two as before.
+              Although the query and target objects are from two different modalities (a 3D model the former, and an RGBD image the latter), we employ the same vision and geometric encoders to compute their features.
+            <p>
+              Lastly, we input the fused features to a registration algorithm based on feature matching to estimate the object 6D pose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Method -->
+
+
+  <!-- Citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      If you find FreeZe useful for your work, please cite:
+      <pre><code>@article{caraffa2024freeze, <br>  title={FreeZe: Training-free zero-shot 6D pose estimation with geometric and vision foundation models}, <br>  author = {Caraffa, Andrea and Boscaini, Davide and Hamza, Amir and Poiesi, Fabio}, <br>  journal = {arXiv:2312.00947}, <br>  year = {2024} <br>}</code></pre>
+    </div>
+  </section>
+  <!--/ Citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/pdf/2312.00947v2.pdf"><i class="fas fa-file-pdf"></i></a>
+        <a class="icon-link" href="https://github.com/andreacaraffa/freeze/" class="external-link" disabled><i class="fab fa-github"></i></a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              The webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
