@@ -1,6 +1,6 @@
 # FreeZe: Training-Free Zero-Shot 6D Pose Estimation with Geometric and Vision Foundation Models
 
-This is the repository that contains source code for the [FreeZe website](https://acaraffa.github.io/freeze/). The website template is from [Nerfies](https://github.com/nerfies/nerfies.github.io).
+This is the repository that contains source code for the [FreeZe website](https://andreacaraffa.github.io/freeze/). The website template is from [Nerfies](https://github.com/nerfies/nerfies.github.io).
 
 If you find FreeZe useful for your work, please cite:
 
