@@ -8,7 +8,7 @@ If you find FreeZe useful for your work, please cite:
 @article{caraffa2024freeze,
   author = {Caraffa, Andrea and Boscaini, Davide and Hamza, Amir and Poiesi, Fabio},
   title = {FreeZe: Training-free zero-shot 6D pose estimation with geometric and vision foundation models},
-  journal = {arXiv:2312.00947},
+  journal = {European Conference on Computer Vision (ECCV)},
   year = {2024},
 }
 ```
